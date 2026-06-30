@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    font-family: 'Prompt', sans-serif;
+    background-image: url('img/25.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #FFFBF5; /* สีข้อความหลัก */
+}
+
+.contact-container {
+    background: rgba(255, 255, 255, 0.9); /* พื้นหลังฟอร์มโปร่งแสง */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 50px;
+    width: 450px;
+    text-align: center;
+    color: #333; /* สีข้อความภายในฟอร์ม */
+    border: 1px solid #2D336B; /* เส้นขอบโปร่งแสง */
+}
+
+.contact-container h1 {
+    margin-bottom: 40px;
+    color: #2D336B; /* สีหัวข้อ */
+    font-size: 2.5em; /* ขนาดหัวข้อ */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.developer-info {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.info-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.info-group label {
+    width: 120px;
+    font-weight: 600;
+    color: #555;
+    text-align: left;
+    margin-right: 10px;
+}
+
+.info-group span {
+    color: #333;
+    font-size: 1.1em;
+    flex-grow: 1; /* ให้ span ขยายเต็มพื้นที่ที่เหลือ */
+}
+
+.contact-container p {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* เพิ่ม animation */
+.contact-container {
+    animation: fadeIn 1s ease-out;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 8px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background: rgba(255, 255, 255, 0.2); /* เพิ่มความโปร่งแสง */
+    backdrop-filter: blur(12px); /* เพิ่มความเบลอ */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* เพิ่มเงา */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* เพิ่มเส้นขอบด้านล่าง */
+}
+.back {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* เพิ่ม transition transform */
+    border: 2px solid #2D336B;
+    background: transparent;
+    /* เปลี่ยนสีปุ่ม Back */
+    color: #2D336B;
+}
+
+.back:hover {
+    transform: translateY(-3px);
+    /* ยกปุ่มขึ้นเล็กน้อยเมื่อ hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* เพิ่มเงาเมื่อ hover */
+    background: #2D336B;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

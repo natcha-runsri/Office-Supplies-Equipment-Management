@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Page</title>
+    <link rel="stylesheet" href="empoyee.css">
+</head>
+<body>
+    <header class="navigation">
+        <h2 class="logo">Employee</h2>
+        <nav class="navigation">
+            <a href="stock_em.html">Stock </a>
+            <a href="request_em.html">Requests Information</a>
+            <button class="btnLogin-popup">Borrowed Request</button>
+            <!-- <a href="user_em.html">User </a> -->
+        </nav>
+        <a href="home.html"><button class="logout">Logout</button></a>
+    </header>
+
+    <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+        <div class="form-box login">
+            <h2>Borrow Requests</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="userid"></ion-icon></span>
+                    <input type="number" id="userid" name="userid" required>
+                    <label>User ID</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="stock_name"></ion-icon></span>
+                    <input type="text" id="stock_name" name="stock_name" required>
+                    <label>Device Name</label>
+                </div>
+                <div class="input-box">
+                    <div>Request Date</div>
+                    <input type="datetime-local" id="requestdate" name="requestdate" required>
+                   
+                </div>
+                
+                <button type="submit" class="blog" onclick="borrow()">Confirm</button>
+            </form>
+        </div>
+    </div>
+    <script src="employee.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+</body>
+</html>

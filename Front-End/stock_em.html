@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stock</title>
+    <link rel="stylesheet" href="stock_em.css">
+</head>
+<body>
+    <header class="flex navigation">
+        <a href="employee.html" class="info">Back</a>
+        <h2 class="logo">Stock informatio</h2>
+    </header>
+    <div class="container">
+        <table id="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="stock"> </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="stock_em.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requests Page</title>
+    <link rel="stylesheet" href="request_em.css">
+</head>
+<body>
+    <header class="flex navigation">
+        <a href="employee.html" class="info">Back</a>
+        <h2 class="logo">Requests  informatio</h2>
+    </header>
+    <div class="container">
+        <table id="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>User ID</th>
+                    <th>Device</th>
+                    <th>Requests Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="request"> </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="request_em.js"></script>
+</body>
+</html>

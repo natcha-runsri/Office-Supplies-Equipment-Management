@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    background: url('img/23.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #00334E; /* เปลี่ยนสีตัวอักษรหลักเป็นสีดำเข้ม */
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background: rgba(255, 255, 255, 0.2); /* เพิ่มความโปร่งแสง */
+    backdrop-filter: blur(12px); /* เพิ่มความเบลอ */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* เพิ่มเงา */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* เพิ่มเส้นขอบด้านล่าง */
+}
+
+.flex.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 2em; /* เพิ่มขนาดตัวอักษรโลโก้ */
+    color: #00334E; /* เปลี่ยนสีโลโก้เป็นสีขาว */
+    margin: 0;
+    font-weight: 700; /* เพิ่มความหนาของตัวอักษร */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* เพิ่มเงาตัวอักษร */
+}
+
+.info {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* เพิ่ม transition transform */
+    border: 2px solid #2D336B;
+    background: transparent; /* เปลี่ยนสีปุ่ม Back */
+    color: #2D336B;
+}
+
+
+.info:hover, .insert:hover {
+    transform: translateY(-3px); /* ยกปุ่มขึ้นเล็กน้อยเมื่อ hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงาเมื่อ hover */
+    background: #2D336B;
+    color: white;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1)); /* เพิ่มไล่สีพื้นหลัง */
+    padding: 40px;
+    backdrop-filter: blur(12px); /* ปรับความเบลอ */
+    border-radius: 16px; /* ปรับมุมโค้ง */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* ปรับเงา */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* เพิ่มขอบ */
+    font-family: 'Arial', sans-serif; /* เปลี่ยน font */
+}
+
+#user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 35px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12); /* ปรับเงาตาราง */
+    border-radius: 16px; /* ปรับมุมโค้งตาราง */
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#user-table th,
+#user-table td {
+    border: 1px solid #e0e0e0;
+    padding: 20px 25px; /* เพิ่ม padding */
+    text-align: left;
+    transition: all 0.3s ease; /* เพิ่ม transition */
+}
+
+#user-table th {
+    background-color: #5c6bc0; /* เปลี่ยนสีหัวตาราง */
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px; /* ปรับระยะห่างตัวอักษร */
+}
+
+#user-table tr:nth-child(even) {
+    background-color: #e8eaf6; /* เปลี่ยนสีพื้นหลังแถวคี่ */
+}
+
+
+#user-table td {
+    font-size: 16px; /* ปรับขนาด font */
+}
+
+
+.save {
+    background-color: #e8eaf6;
+    color: #5c6bc0;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.info:hover, .save:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: #2D336B;
+    color: white;
+}
+
+#user-table .edit,
+#user-table .delete {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    min-width: 90px;
+    margin: 5px;
+}
+
+#user-table .edit {
+    background-color: #64b5f6;
+    color: #fff;
+}
+
+#user-table .edit:hover {
+    background-color: #42a5f5;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+#user-table .delete {
+    background-color: #e57373;
+    color: #fff;
+}
+
+#user-table .delete:hover {
+    background-color: #d32f2f;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+#user-table td:nth-last-child(2),
+#user-table td:last-child {
+    text-align: center;
+}
+
+.wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* ปรับความโปร่งแสง */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(12px); /* ปรับความเบลอ */
+    transition: all 0.3s ease; /* เพิ่ม transition */
+}
+
+.wrapper.active-popup,
+.wrapper.active {
+    display: flex;
+}
+
+.wrapper.active-popup {
+    transform: scale(1);
+}
+
+.wrapper.active {
+    height: 100vh; /* เปลี่ยนเป็น 100vh */
+}
+
+.popup {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6)); /* เพิ่มไล่สีพื้นหลัง */
+    padding: 40px;
+    border-radius: 20px; /* ปรับมุมโค้ง */
+    width: 500px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); /* ปรับเงา */
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* เพิ่ม font */
+}
+
+.popup .icon-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background:#2D336B; /* เปลี่ยนสีปุ่มปิด */
+    font-size: 1.2em; /* ลดขนาด icon */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* เพิ่ม transition */
+}
+
+.popup .icon-close:hover {
+    background-color: #A6B1E1; /* เปลี่ยนสี hover */
+    transform: scale(1.1);
+}
+
+.popup h2 {
+    font-size: 2em; /* ปรับขนาด font */
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px; /* เพิ่มระยะห่าง */
+}
+
+.popup label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #444;
+}
+
+.popup input[type="text"],
+popup input[type="number"],
+popup select {
+    width: calc(100% - 24px);
+    padding: 16px; /* เพิ่ม padding */
+    margin-bottom: 25px;
+    border: 1px solid #ccc; /* ปรับสีขอบ */
+    border-radius: 10px; /* ปรับมุมโค้ง */
+    font-size: 1em;
+    background-color: #f0f0f0; /* ปรับสีพื้นหลัง */
+    color: #333;
+    transition: border-color 0.3s ease; /* เพิ่ม transition */
+}
+
+popup input[type="text"]:focus,
+popup input[type="number"]:focus,
+popup select:focus {
+    border-color: #64b5f6; /* เปลี่ยนสีขอบเมื่อ focus */
+    outline: none; /* ลบ outline */
+}
+
+popup button[type="submit"] {
+    background-color: #64b5f6;
+    color: #fff;
+    padding: 16px 30px; /* เพิ่ม padding */
+    border: none;
+    border-radius: 10px; /* ปรับมุมโค้ง */
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* เพิ่ม transition */
+}
+
+popup button[type="submit"]:hover {
+    background: #42a5f5; /* เปลี่ยนสี hover */
+    transform: translateY(-5px); /* เลื่อนขึ้นเล็กน้อย */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+}
