@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require('express');
-const bodyParset = require('body-parser');
+const bodyParser = require('body-parser');
 const mysql = require('mysql2/promise');
 const e = require('express');
 const app = express();
@@ -9,7 +9,7 @@ const nodemailer = require("nodemailer");
 
 const port = 8800;
 
-app.use(bodyParset.json());
+app.use(bodyParser.json());
 app.use(cors());
 
 const initMySQL = async () => {
